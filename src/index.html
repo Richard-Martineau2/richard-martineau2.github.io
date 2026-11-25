@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+	<title>Spotted Richard Martineau</title>
+	<meta name="description" content="Site satirique et critique sur Richard Martineau. Glissez la souris ou le doigt de gauche à droite pour faire défiler la vidéo, image par image. Plus à venir..." />
+	<meta name="author" content="Maxime Larrivée-Roy" />
+	<meta name="robots" content="index, follow, max-image-preview:large" />
+	<meta name="theme-color" content="#000000" />
+	<link rel="canonical" href="https://richardmartineau.com/" />
+	<link rel="icon" href="favicon.ico" sizes="any" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Spotted Richard Martineau" />
+	<meta property="og:locale" content="fr_CA" />
+	<meta property="og:title" content="Spotted Richard Martineau" />
+	<meta property="og:description" content="Site satirique et critique sur Richard Martineau. Glissez la souris ou le doigt de gauche à droite pour faire défiler la vidéo, image par image. Plus à venir..." />
+	<meta property="og:url" content="https://richardmartineau.com/" />
+	<meta property="og:image" content="https://richardmartineau.com/assets/ogimage.webp" />
+	<meta property="og:image:type" content="image/webp" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Spotted Richard Martineau" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Spotted Richard Martineau" />
+	<meta name="twitter:description" content="Site satirique et critique sur Richard Martineau. Glissez la souris ou le doigt de gauche à droite pour faire défiler la vidéo, image par image. Plus à venir..." />
+	<meta name="twitter:image" content="https://richardmartineau.com/assets/ogimage.webp" />
+	<meta name="twitter:image:alt" content="Spotted Richard Martineau" />
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": "Spotted Richard Martineau",
+		"url": "https://richardmartineau.com/",
+		"inLanguage": "fr-CA",
+		"description": "Site satirique et critique sur Richard Martineau. Glissez la souris ou le doigt de gauche à droite pour faire défiler la vidéo, image par image. Plus à venir..."
+	}
+	</script>
+	<link rel="stylesheet" href="styles/main.min.css" />
+</head>
+<body>
+	<div id="app"></div>
+	<header class="sr-only">
+		<h1>Spotted Richard Martineau</h1>
+		<p>Site satirique et critique sur Richard Martineau. Glissez la souris ou le doigt de gauche à droite pour faire défiler la vidéo, image par image.</p>
+	</header>
+	<div id="topbar">
+		<div class="icons">
+			<!-- Temporarily hidden
+			<a class="icon-btn" id="facebook" href="https://www.facebook.com/spottedrichardmartineau" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+				<span class="icon icon-facebook" aria-hidden="true"></span>
+			</a>
+			-->
+
+			<button class="icon-btn" id="info" type="button" aria-label="Information" aria-haspopup="dialog">
+				<span class="icon icon-info" aria-hidden="true"></span>
+			</button>
+		</div>
+		<div id="badge">Bientôt en ligne...</div>
+	</div>
+	<dialog id="info-modal" aria-labelledby="info-title">
+		<button class="close" type="button" aria-label="Fermer">&times;</button>
+		<h2 id="info-title">Avis important – site parodique et satirique</h2>
+		<p>Ce site est une œuvre indépendante de satire, de parodie et de critique politique. Il n'est aucunement associé à Richard Martineau, à ses employeurs, à ses éditeurs ou à toute organisation avec laquelle il pourrait être affilié.</p>
+		<p>Ce site n'est ni son site officiel, ni une plateforme autorisée ou approuvée par celui-ci. Il ne prétend aucunement parler en son nom.</p>
+		<p>L'utilisation du nom «&nbsp;Richard Martineau&nbsp;» sert exclusivement à identifier la personnalité publique faisant l'objet de la satire et de la critique. Elle ne vise pas à créer une confusion quant à l'identité de l'auteur ou à l'origine du site.</p>
+		<p>Les textes, illustrations, caricatures, mises en scène et autres contenus publiés ici relèvent de la parodie, de l'humour, de l'ironie et de l'expression d'opinions. Ils peuvent comporter de l'exagération, de l'absurde et des procédés satiriques qui ne doivent pas être interprétés comme des déclarations factuelles ou des reportages journalistiques.</p>
+		<p>L'objectif du site est de commenter, de critiquer et de tourner en dérision les prises de position publiques, les arguments et les interventions médiatiques de Richard Martineau.</p>
+		<p>Toute ressemblance avec des faits réels dans les passages humoristiques ou fictifs est utilisée dans un contexte de satire et de commentaire.</p>
+		<p>En accédant à ce site, le visiteur est informé qu'il consulte une plateforme indépendante consacrée à la parodie et à la critique politique.</p>
+	</dialog>
+	<div id="hint"><span class="arrow left">&#8592;</span><span class="label"><span class="touch">Appuis et glisse</span><span class="mouse">Glisse la souris</span></span><span class="arrow right">&#8594;</span></div>
+	<noscript><p class="sr-only">Cette page nécessite JavaScript pour faire défiler la vidéo.</p></noscript>
+	<script>
+		const script = document.createElement('script');
+		script.src = new URL('scripts/rmshit.core.min.js', window.location).href;
+		script.async = true;
+		script.onload = () => RmShit({ parent: "app" });
+		document.head.appendChild(script);
+	</script>
+</body>
+</html>
